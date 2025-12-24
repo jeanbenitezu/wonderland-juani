@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug PWA - Wonderland</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            max-width: 600px; 
+            margin: 20px auto; 
+            padding: 20px;
+            background: #f0f0f0;
+        }
+        .status { 
+            padding: 10px; 
+            margin: 10px 0; 
+            border-radius: 5px; 
+            background: white;
+        }
+        .success { border-left: 4px solid green; }
+        .error { border-left: 4px solid red; }
+        .warning { border-left: 4px solid orange; }
+        button { 
+            padding: 10px 15px; 
+            margin: 5px; 
+            border: none; 
+            border-radius: 5px; 
+            background: #667eea; 
+            color: white; 
+            cursor: pointer;
+        }
+        button:hover { background: #5a67d8; }
+    </style>
+</head>
+<body>
+    <h1>🔧 PWA Debug - Wonderland</h1>
+    
+    <div id="status"></div>
+    
+    <h2>Acciones de depuración:</h2>
+    <button onclick="clearAllCaches()">🗑️ Limpiar Caches</button>
+    <button onclick="unregisterSW()">❌ Desregistrar SW</button>
+    <button onclick="reloadAndTest()">🔄 Recargar y Probar</button>
+    <button onclick="window.location.href='index.html'">🏠 Ir a App</button>
+    
+    <script>
+        function updateStatus() {
+            const statusDiv = document.getElementById('status');
+            let html = '';
+            
+            // Check Service Worker
+            if ('serviceWorker' in navigator) {
+                html += `<div class="status success">✅ Service Worker soportado</div>`;
+                
+                navigator.serviceWorker.getRegistrations().then(registrations => {
+                    if (registrations.length > 0) {
+                        html += `<div class="status success">✅ SW Registrado: ${registrations.length}</div>`;
+                    } else {
+                        html += `<div class="status error">❌ SW No registrado</div>`;
+                    }
+                    statusDiv.innerHTML = html;
+                });
+            } else {
+                html += `<div class="status error">❌ Service Worker no soportado</div>`;
+            }
+            
+            // Check PWA install
+            if (window.matchMedia('(display-mode: standalone)').matches) {
+                html += `<div class="status success">✅ PWA instalada (modo standalone)</div>`;
+            } else {
+                html += `<div class="status warning">⚠️ Ejecutándose en navegador</div>`;
+            }
+            
+            // Check current URL
+            html += `<div class="status">📍 URL actual: ${window.location.href}</div>`;
+            html += `<div class="status">📍 Origin: ${window.location.origin}</div>`;
+            html += `<div class="status">📍 Pathname: ${window.location.pathname}</div>`;
+            
+            statusDiv.innerHTML = html;
+        }
+        
+        async function clearAllCaches() {
+            try {
+                const cacheNames = await caches.keys();
+                await Promise.all(
+                    cacheNames.map(name => caches.delete(name))
+                );
+                alert(`✅ Caches eliminados: ${cacheNames.join(', ')}`);
+                updateStatus();
+            } catch (error) {
+                alert(`❌ Error: ${error.message}`);
+            }
+        }
+        
+        async function unregisterSW() {
+            try {
+                const registrations = await navigator.serviceWorker.getRegistrations();
+                await Promise.all(
+                    registrations.map(reg => reg.unregister())
+                );
+                alert(`✅ Service Workers desregistrados: ${registrations.length}`);
+                updateStatus();
+            } catch (error) {
+                alert(`❌ Error: ${error.message}`);
+            }
+        }
+        
+        function reloadAndTest() {
+            window.location.reload();
+        }
+        
+        // Auto-update status
+        updateStatus();
+        setInterval(updateStatus, 5000);
+    </script>
+</body>
+</html>
