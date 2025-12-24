@@ -1,0 +1,507 @@
+{
+  "Number_0": {
+    "imagen": "assets/wonderland_assets/Number_0/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_0/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_0/audio.wav"
+  },
+  "Number_1": {
+    "imagen": "assets/wonderland_assets/Number_1/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_1/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_2": {
+    "imagen": "assets/wonderland_assets/Number_2/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_2/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_3": {
+    "imagen": "assets/wonderland_assets/Number_3/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_3/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_3/audio.wav"
+  },
+  "Number_4": {
+    "imagen": "assets/wonderland_assets/Number_4/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_4/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_4/audio.wav"
+  },
+  "Number_5": {
+    "imagen": "assets/wonderland_assets/Number_5/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_5/audio.wav",
+    "audio_saludo": "assets/wonderland_assets/Number_5/audio.mp3"
+  },
+  "Number_6": {
+    "imagen": "assets/wonderland_assets/Number_6/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_6/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_6/audio.wav"
+  },
+  "Number_7": {
+    "imagen": "assets/wonderland_assets/Number_7/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_7/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_7/audio.wav"
+  },
+  "Number_8": {
+    "imagen": "assets/wonderland_assets/Number_8/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_8/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_8/audio.wav"
+  },
+  "Number_9": {
+    "imagen": "assets/wonderland_assets/Number_9/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_9/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_9/audio.wav"
+  },
+  "Number_10": {
+    "imagen": "assets/wonderland_assets/Number_10/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_10/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_11": {
+    "imagen": "assets/wonderland_assets/Number_11/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_11/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_12": {
+    "imagen": "assets/wonderland_assets/Number_12/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_12/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_13": {
+    "imagen": "assets/wonderland_assets/Number_13/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_13/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_14": {
+    "imagen": "assets/wonderland_assets/Number_14/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_14/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_15": {
+    "imagen": "assets/wonderland_assets/Number_15/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_15/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_16": {
+    "imagen": "assets/wonderland_assets/Number_16/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_16/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_17": {
+    "imagen": "assets/wonderland_assets/Number_17/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_17/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_18": {
+    "imagen": "assets/wonderland_assets/Number_18/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_18/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_19": {
+    "imagen": "assets/wonderland_assets/Number_19/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_19/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_20": {
+    "imagen": "assets/wonderland_assets/Number_20/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_20/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_21": {
+    "imagen": "assets/wonderland_assets/Number_21/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_21/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_22": {
+    "imagen": "assets/wonderland_assets/Number_22/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_22/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_23": {
+    "imagen": "assets/wonderland_assets/Number_23/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_23/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_24": {
+    "imagen": "assets/wonderland_assets/Number_24/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_24/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_25": {
+    "imagen": "assets/wonderland_assets/Number_25/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_25/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_26": {
+    "imagen": "assets/wonderland_assets/Number_26/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_26/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_27": {
+    "imagen": "assets/wonderland_assets/Number_27/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_27/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_28": {
+    "imagen": "assets/wonderland_assets/Number_28/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_28/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_29": {
+    "imagen": "assets/wonderland_assets/Number_29/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_29/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_30": {
+    "imagen": "assets/wonderland_assets/Number_30/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_30/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_31": {
+    "imagen": "assets/wonderland_assets/Number_31/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_31/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_32": {
+    "imagen": "assets/wonderland_assets/Number_32/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_32/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_33": {
+    "imagen": "assets/wonderland_assets/Number_33/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_33/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_34": {
+    "imagen": "assets/wonderland_assets/Number_34/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_34/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_35": {
+    "imagen": "assets/wonderland_assets/Number_35/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_35/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_36": {
+    "imagen": "assets/wonderland_assets/Number_36/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_36/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_37": {
+    "imagen": "assets/wonderland_assets/Number_37/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_37/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_38": {
+    "imagen": "assets/wonderland_assets/Number_38/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_38/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_39": {
+    "imagen": "assets/wonderland_assets/Number_39/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_39/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_40": {
+    "imagen": "assets/wonderland_assets/Number_40/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_40/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_41": {
+    "imagen": "assets/wonderland_assets/Number_41/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_41/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_42": {
+    "imagen": "assets/wonderland_assets/Number_42/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_42/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_43": {
+    "imagen": "assets/wonderland_assets/Number_43/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_43/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_44": {
+    "imagen": "assets/wonderland_assets/Number_44/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_44/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_45": {
+    "imagen": "assets/wonderland_assets/Number_45/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_45/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_46": {
+    "imagen": "assets/wonderland_assets/Number_46/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_46/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_47": {
+    "imagen": "assets/wonderland_assets/Number_47/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_47/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_48": {
+    "imagen": "assets/wonderland_assets/Number_48/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_48/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_49": {
+    "imagen": "assets/wonderland_assets/Number_49/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_49/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_50": {
+    "imagen": "assets/wonderland_assets/Number_50/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_50/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_51": {
+    "imagen": "assets/wonderland_assets/Number_51/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_51/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_52": {
+    "imagen": "assets/wonderland_assets/Number_52/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_52/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_53": {
+    "imagen": "assets/wonderland_assets/Number_53/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_53/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_54": {
+    "imagen": "assets/wonderland_assets/Number_54/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_54/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_55": {
+    "imagen": "assets/wonderland_assets/Number_55/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_55/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_56": {
+    "imagen": "assets/wonderland_assets/Number_56/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_56/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_57": {
+    "imagen": "assets/wonderland_assets/Number_57/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_57/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_58": {
+    "imagen": "assets/wonderland_assets/Number_58/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_58/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_59": {
+    "imagen": "assets/wonderland_assets/Number_59/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_59/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_60": {
+    "imagen": "assets/wonderland_assets/Number_60/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_60/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_61": {
+    "imagen": "assets/wonderland_assets/Number_61/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_61/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_62": {
+    "imagen": "assets/wonderland_assets/Number_62/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_62/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_63": {
+    "imagen": "assets/wonderland_assets/Number_63/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_63/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_64": {
+    "imagen": "assets/wonderland_assets/Number_64/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_64/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_65": {
+    "imagen": "assets/wonderland_assets/Number_65/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_65/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_66": {
+    "imagen": "assets/wonderland_assets/Number_66/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_66/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_67": {
+    "imagen": "assets/wonderland_assets/Number_67/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_67/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_68": {
+    "imagen": "assets/wonderland_assets/Number_68/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_68/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_69": {
+    "imagen": "assets/wonderland_assets/Number_69/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_69/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_70": {
+    "imagen": "assets/wonderland_assets/Number_70/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_70/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_71": {
+    "imagen": "assets/wonderland_assets/Number_71/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_71/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_72": {
+    "imagen": "assets/wonderland_assets/Number_72/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_72/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_73": {
+    "imagen": "assets/wonderland_assets/Number_73/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_73/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_74": {
+    "imagen": "assets/wonderland_assets/Number_74/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_74/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_75": {
+    "imagen": "assets/wonderland_assets/Number_75/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_75/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_76": {
+    "imagen": "assets/wonderland_assets/Number_76/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_76/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_77": {
+    "imagen": "assets/wonderland_assets/Number_77/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_77/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_78": {
+    "imagen": "assets/wonderland_assets/Number_78/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_78/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_79": {
+    "imagen": "assets/wonderland_assets/Number_79/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_79/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_80": {
+    "imagen": "assets/wonderland_assets/Number_80/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_80/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_81": {
+    "imagen": "assets/wonderland_assets/Number_81/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_81/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_82": {
+    "imagen": "assets/wonderland_assets/Number_82/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_82/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_83": {
+    "imagen": "assets/wonderland_assets/Number_83/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_83/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_84": {
+    "imagen": "assets/wonderland_assets/Number_84/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_84/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_85": {
+    "imagen": "assets/wonderland_assets/Number_85/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_85/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_86": {
+    "imagen": "assets/wonderland_assets/Number_86/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_86/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_87": {
+    "imagen": "assets/wonderland_assets/Number_87/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_87/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_88": {
+    "imagen": "assets/wonderland_assets/Number_88/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_88/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_89": {
+    "imagen": "assets/wonderland_assets/Number_89/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_89/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_90": {
+    "imagen": "assets/wonderland_assets/Number_90/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_90/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_91": {
+    "imagen": "assets/wonderland_assets/Number_91/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_91/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_92": {
+    "imagen": "assets/wonderland_assets/Number_92/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_92/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_93": {
+    "imagen": "assets/wonderland_assets/Number_93/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_93/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_94": {
+    "imagen": "assets/wonderland_assets/Number_94/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_94/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_95": {
+    "imagen": "assets/wonderland_assets/Number_95/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_95/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_96": {
+    "imagen": "assets/wonderland_assets/Number_96/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_96/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_97": {
+    "imagen": "assets/wonderland_assets/Number_97/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_97/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_98": {
+    "imagen": "assets/wonderland_assets/Number_98/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_98/audio.mp3",
+    "audio_saludo": null
+  },
+  "Number_99": {
+    "imagen": "assets/wonderland_assets/Number_99/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_99/audio.wav",
+    "audio_saludo": null
+  },
+  "Number_100": {
+    "imagen": "assets/wonderland_assets/Number_100/image.png",
+    "audio_nombre": "assets/wonderland_assets/Number_100/audio.mp3",
+    "audio_saludo": "assets/wonderland_assets/Number_100/audio.wav"
+  }
+}

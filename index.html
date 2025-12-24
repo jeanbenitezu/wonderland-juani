@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="description" content="Aplicación de juegos educativos de números para Juan Ignacio">
+    <meta name="theme-color" content="#667eea">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Wonderland">
+    <meta name="msapplication-TileColor" content="#667eea">
+    <meta name="msapplication-navbutton-color" content="#667eea">
+    <meta name="application-name" content="Wonderland">
+    <title>Wonderland - Juegos para Juani</title>
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Icons for different devices -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2vh 2vw;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 95vw;
+            max-height: 90vh;
+            text-align: center;
+        }
+
+        .header {
+            margin-bottom: clamp(20px, 5vh, 50px);
+        }
+
+        h1 {
+            font-size: clamp(2rem, 6vw, 4rem);
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            margin-bottom: clamp(10px, 2vh, 20px);
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            opacity: 0.9;
+            margin-bottom: clamp(10px, 2vh, 15px);
+        }
+
+        .welcome-text {
+            font-size: clamp(1rem, 2.5vw, 1.5rem);
+            opacity: 0.8;
+            max-width: 600px;
+            margin: 0 auto clamp(30px, 6vh, 60px);
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: clamp(20px, 4vw, 40px);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .menu-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: clamp(25px, 5vh, 40px);
+            border: 2px solid rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: all 0.4s ease;
+            text-decoration: none;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .menu-card:hover {
+            transform: translateY(-10px) scale(1.05);
+            background: rgba(255,255,255,0.2);
+            border-color: rgba(255,255,255,0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+
+        .menu-card:hover::before {
+            left: 100%;
+        }
+
+        .card-icon {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: clamp(15px, 3vh, 25px);
+            display: block;
+        }
+
+        .card-title {
+            font-size: clamp(1.3rem, 3vw, 1.8rem);
+            font-weight: bold;
+            margin-bottom: clamp(10px, 2vh, 15px);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .card-description {
+            font-size: clamp(0.9rem, 2vw, 1.2rem);
+            opacity: 0.9;
+            line-height: 1.4;
+        }
+
+        .footer {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: clamp(0.8rem, 1.5vw, 1rem);
+            opacity: 0.7;
+        }
+
+        /* Colores específicos para cada tarjeta */
+        .memory-card { border-color: #4CAF50; }
+        .memory-card:hover { border-color: #66BB6A; }
+
+        .gallery-card { border-color: #2196F3; }
+        .gallery-card:hover { border-color: #42A5F5; }
+
+        .favorite-card { border-color: #FF9800; }
+        .favorite-card:hover { border-color: #FFB74D; }
+
+        .about-card { border-color: #9C27B0; }
+        .about-card:hover { border-color: #BA68C8; }
+
+        /* Responsive adicional */
+        @media (max-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr;
+                gap: clamp(15px, 3vh, 25px);
+            }
+        }
+
+        @media (orientation: landscape) and (max-height: 600px) {
+            .container {
+                max-height: 95vh;
+            }
+            
+            .header {
+                margin-bottom: clamp(15px, 3vh, 30px);
+            }
+            
+            .welcome-text {
+                margin-bottom: clamp(20px, 4vh, 40px);
+            }
+        }
+    </style>
+</head>
+<body role="presentation" aria-hidden="true">
+    <div class="container">
+        <div class="header">
+            <h1>🌟 Galería Wonderland de Juani 🌟</h1>
+            <p class="subtitle">¡Bienvenido a tu mundo de diversión!</p>
+            <p class="welcome-text">
+                Hola Juan Ignacio, aquí tienes todos tus juegos favoritos con los números de Wonderland. 
+                ¡Elige la aventura que quieras vivir hoy!
+            </p>
+        </div>
+
+        <div class="menu-grid">
+            <a href="memory_game.html" class="menu-card memory-card">
+                <span class="card-icon">🧩</span>
+                <h2 class="card-title">Juego de la Memoria</h2>
+                <p class="card-description">
+                    ¡Encuentra las parejas de números! Ejercita tu memoria mientras juegas con tus personajes favoritos de Wonderland.
+                </p>
+            </a>
+
+            <a href="gallery.html" class="menu-card gallery-card">
+                <span class="card-icon">📖</span>
+                <h2 class="card-title">Todos los Números</h2>
+                <p class="card-description">
+                    Explora la galería completa con todos los números de Wonderland. ¡Conoce a cada personaje y escucha sus voces!
+                </p>
+            </a>
+
+            <a href="favorite.html" class="menu-card favorite-card">
+                <span class="card-icon">⭐</span>
+                <h2 class="card-title">¿Cuál es tu Favorito?</h2>
+                <p class="card-description">
+                    Elige tu número favorito de Wonderland y descubre datos curiosos. ¡Crea tu propia colección especial!
+                </p>
+            </a>
+
+            <a href="about.html" class="menu-card about-card">
+                <span class="card-icon">ℹ️</span>
+                <h2 class="card-title">Sobre el Juego</h2>
+                <p class="card-description">
+                    Conoce más sobre esta aplicación especial creada para ti. ¡Descubre todos los secretos de Wonderland!
+                </p>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        ❤️ Hecho con amor para Juani
+    </div>
+
+    <script>
+        // Añadir efectos de sonido al hacer hover (opcional)
+        document.querySelectorAll('.menu-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                // Aquí se podría añadir un sonido suave
+                card.style.transform = 'translateY(-10px) scale(1.05)';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Agregar ripple effect al hacer click
+        document.querySelectorAll('.menu-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                const x = e.clientX - rect.left - size / 2;
+                const y = e.clientY - rect.top - size / 2;
+                
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255,255,255,0.3)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.pointerEvents = 'none';
+                
+                this.appendChild(ripple);
+                
+                setTimeout(() => {
+                    ripple.remove();
+                }, 600);
+            });
+        });
+
+        // CSS para animación ripple
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Registrar Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./sw.js')
+                    .then((registration) => {
+                        console.log('Service Worker registrado con éxito:', registration.scope);
+                    })
+                    .catch((error) => {
+                        console.log('Error al registrar Service Worker:', error);
+                    });
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+{
+  "name": "Wonderland - Juegos para Juani",
+  "short_name": "Wonderland",
+  "description": "Aplicación de juegos educativos de números para Juan Ignacio",
+  "start_url": "/",
+  "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
+  "background_color": "#667eea",
+  "theme_color": "#667eea",
+  "orientation": "any",
+  "scope": "/",
+  "prefer_related_applications": false,
+  "id": "wonderland-juani-app",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' fill='%23667eea' rx='30'/><text x='96' y='125' font-size='80' text-anchor='middle' fill='white'>🎮</text></svg>",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'><rect width='512' height='512' fill='%23667eea' rx='80'/><text x='256' y='330' font-size='220' text-anchor='middle' fill='white'>🎮</text></svg>",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='%23667eea' rx='25'/><text x='90' y='115' font-size='70' text-anchor='middle' fill='white'>🎮</text></svg>",
+      "sizes": "180x180",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ],
+  "lang": "es",
+  "categories": ["education", "games", "kids"],
+  "launch_handler": {
+    "client_mode": "focus-existing"
+  },
+  "screenshots": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 640'><rect width='320' height='640' fill='%23667eea'/><text x='160' y='320' font-size='40' text-anchor='middle' fill='white'>🎮 Wonderland</text><text x='160' y='380' font-size='20' text-anchor='middle' fill='white'>Juegos para Juan Ignacio</text></svg>",
+      "sizes": "320x640",
+      "type": "image/svg+xml",
+      "form_factor": "narrow"
+    }
+  ]
+}

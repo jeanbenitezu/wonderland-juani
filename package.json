@@ -1,0 +1,21 @@
+{
+  "name": "wonderland-juani",
+  "version": "1.0.0",
+  "description": "Aplicación educativa de números para Juan Ignacio con 101 personajes de Wonderland",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "scrape": "cd scripts && python wonderland_scrapper.py",
+    "generate-data": "cd scripts && python create_js_data.py"
+  },
+  "author": "JC Benítez",
+  "license": "MIT",
+  "features": [
+    "Juego de memoria con 4 niveles de dificultad",
+    "Galería interactiva con búsqueda",
+    "Sistema de números favoritos",
+    "PWA con funcionamiento offline",
+    "Diseño responsive optimizado para tablets",
+    "Audio pronunciación para cada número"
+  ]
+}

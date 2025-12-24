@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Número Favorito - Wonderland</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            background: linear-gradient(135deg, #9C27B0 0%, #E91E63 100%);
+            min-height: 100vh;
+            min-height: 100dvh;
+            padding: 2vh 2vw;
+            color: white;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 15px;
+            padding: 15px;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s;
+            z-index: 100;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.1);
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex: 1;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            margin-bottom: clamp(10px, 2vh, 20px);
+        }
+
+        .subtitle {
+            font-size: clamp(1.1rem, 3vw, 1.5rem);
+            margin-bottom: clamp(30px, 5vh, 50px);
+            opacity: 0.9;
+        }
+
+        .current-favorite {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: clamp(20px, 4vh, 40px);
+            border: 2px solid rgba(255,255,255,0.2);
+            margin-bottom: clamp(30px, 5vh, 50px);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .favorite-image {
+            width: clamp(120px, 20vw, 200px);
+            height: clamp(120px, 20vw, 200px);
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            background: rgba(255,255,255,0.1);
+            display: block;
+            object-fit: cover;
+        }
+
+        .favorite-name {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .play-favorite-btn {
+            background: #4CAF50;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .play-favorite-btn:hover {
+            background: #66BB6A;
+            transform: scale(1.05);
+        }
+
+        .number-selector {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 25px;
+            padding: clamp(20px, 4vh, 30px);
+            border: 2px solid rgba(255,255,255,0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        .selector-title {
+            font-size: clamp(1.3rem, 3.5vw, 1.8rem);
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .number-input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .number-input {
+            background: rgba(255,255,255,0.9);
+            border: none;
+            border-radius: 15px;
+            padding: 15px 20px;
+            font-size: 1.5rem;
+            text-align: center;
+            width: 100px;
+            color: #333;
+            font-weight: bold;
+            outline: none;
+        }
+
+        .random-btn {
+            background: #FF9800;
+            border: none;
+            border-radius: 20px;
+            padding: 12px 20px;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+
+        .random-btn:hover {
+            background: #FFB74D;
+            transform: scale(1.05);
+        }
+
+        .set-favorite-btn {
+            background: #E91E63;
+            border: none;
+            border-radius: 25px;
+            padding: 15px 30px;
+            color: white;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: inherit;
+            width: 100%;
+            max-width: 250px;
+        }
+
+        .set-favorite-btn:hover {
+            background: #F06292;
+            transform: scale(1.05);
+        }
+
+        .set-favorite-btn:disabled {
+            background: #666;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .no-favorite {
+            text-align: center;
+            opacity: 0.8;
+            font-size: 1.2rem;
+            margin-bottom: clamp(30px, 5vh, 50px);
+        }
+
+        .preview-container {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .preview-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 15px;
+            margin: 0 auto 10px;
+            background: rgba(255,255,255,0.1);
+            display: block;
+            object-fit: cover;
+        }
+
+        .preview-name {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .preview-play-btn {
+            background: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            padding: 8px 16px;
+            color: white;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .preview-play-btn:hover {
+            background: #66BB6A;
+            transform: scale(1.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-container {
+                padding: 20px 10px;
+            }
+
+            .number-input-container {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .number-input {
+                width: 120px;
+            }
+        }
+    </style>
+</head>
+<body role="presentation" aria-hidden="true">
+    <button class="back-btn" onclick="goBack()">⬅️</button>
+
+    <div class="main-container">
+        <h1>💝 ¿Cuál es tu número favorito?</h1>
+        <p class="subtitle">Elige tu número de Wonderland preferido y guárdalo para siempre</p>
+
+        <!-- Favorito actual -->
+        <div id="currentFavorite" class="current-favorite" style="display: none;">
+            <img id="favoriteImage" class="favorite-image" alt="Número favorito">
+            <div id="favoriteName" class="favorite-name"></div>
+            <button class="play-favorite-btn" onclick="playFavoriteAudio()">🎵 Escuchar mi favorito</button>
+        </div>
+
+        <div id="noFavorite" class="no-favorite">
+            Aún no has elegido un número favorito 🤔
+        </div>
+
+        <!-- Selector de número -->
+        <div class="number-selector">
+            <div class="selector-title">Elige tu número favorito:</div>
+            
+            <div class="number-input-container">
+                <input 
+                    type="number" 
+                    class="number-input" 
+                    id="numberInput"
+                    min="0" 
+                    max="100" 
+                    placeholder="0-100"
+                >
+                <button class="random-btn" onclick="selectRandomNumber()">🎲 Sorpréndeme</button>
+            </div>
+
+            <div id="previewContainer" class="preview-container" style="display: none;">
+                <img id="previewImage" class="preview-image" alt="Vista previa">
+                <div id="previewName" class="preview-name"></div>
+                <button class="preview-play-btn" onclick="playPreviewAudio()">🔊 Escuchar</button>
+            </div>
+
+            <button class="set-favorite-btn" id="setFavoriteBtn" onclick="setFavorite()" disabled>
+                💖 Establecer como favorito
+            </button>
+        </div>
+    </div>
+
+    <script src="data/wonderland_data.js"></script>
+    <script>
+        let favoriteNumber = null;
+        let previewNumber = null;
+        let currentAudio = null;
+        let allNumbers = {};
+
+        function goBack() {
+            window.location.href = 'index.html';
+        }
+
+        function loadWonderlandData() {
+            if (typeof wonderlandNumbers !== 'undefined') {
+                wonderlandNumbers.forEach(num => {
+                    allNumbers[num.id] = num;
+                });
+                loadFavorite();
+            } else {
+                setTimeout(loadWonderlandData, 100);
+            }
+        }
+
+        function loadFavorite() {
+            const saved = localStorage.getItem('wonderland_favorite');
+            if (saved && allNumbers[saved]) {
+                favoriteNumber = allNumbers[saved];
+                showCurrentFavorite();
+            }
+        }
+
+        function showCurrentFavorite() {
+            if (favoriteNumber) {
+                document.getElementById('currentFavorite').style.display = 'block';
+                document.getElementById('noFavorite').style.display = 'none';
+                
+                document.getElementById('favoriteImage').src = favoriteNumber.image;
+                document.getElementById('favoriteName').textContent = `Número ${favoriteNumber.id}`;
+            }
+        }
+
+        function playAudio(audioSrc, numberName) {
+            // Detener audio anterior
+            if (currentAudio && !currentAudio.paused) {
+                currentAudio.pause();
+                currentAudio.currentTime = 0;
+            }
+
+            if (audioSrc) {
+                try {
+                    currentAudio = new Audio(audioSrc);
+                    currentAudio.volume = 0.7;
+                    currentAudio.play().catch(e => {
+                        console.log('No se pudo reproducir audio para', numberName);
+                    });
+                } catch (e) {
+                    console.log('Error reproduciendo audio:', e);
+                }
+            }
+        }
+
+        function playFavoriteAudio() {
+            if (favoriteNumber && favoriteNumber.audio) {
+                playAudio(favoriteNumber.audio, `Número ${favoriteNumber.id}`);
+            }
+        }
+
+        function playPreviewAudio() {
+            if (previewNumber && previewNumber.audio) {
+                playAudio(previewNumber.audio, `Número ${previewNumber.id}`);
+            }
+        }
+
+        function selectRandomNumber() {
+            const randomId = Math.floor(Math.random() * 101);
+            document.getElementById('numberInput').value = randomId;
+            showPreview(randomId);
+        }
+
+        function showPreview(numberId) {
+            if (allNumbers[numberId]) {
+                previewNumber = allNumbers[numberId];
+                
+                document.getElementById('previewContainer').style.display = 'block';
+                document.getElementById('previewImage').src = previewNumber.image;
+                document.getElementById('previewName').textContent = `Número ${previewNumber.id}`;
+                document.getElementById('setFavoriteBtn').disabled = false;
+            } else {
+                document.getElementById('previewContainer').style.display = 'none';
+                document.getElementById('setFavoriteBtn').disabled = true;
+                previewNumber = null;
+            }
+        }
+
+        function setFavorite() {
+            if (previewNumber) {
+                favoriteNumber = previewNumber;
+                localStorage.setItem('wonderland_favorite', favoriteNumber.id);
+                showCurrentFavorite();
+                
+                // Mostrar confirmación
+                const btn = document.getElementById('setFavoriteBtn');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✅ ¡Guardado!';
+                btn.style.background = '#4CAF50';
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.background = '#E91E63';
+                }, 2000);
+            }
+        }
+
+        // Event listeners
+        document.getElementById('numberInput').addEventListener('input', (e) => {
+            const value = parseInt(e.target.value);
+            if (!isNaN(value) && value >= 0 && value <= 100) {
+                showPreview(value);
+            } else {
+                document.getElementById('previewContainer').style.display = 'none';
+                document.getElementById('setFavoriteBtn').disabled = true;
+                previewNumber = null;
+            }
+        });
+
+        // Tecla Enter para establecer favorito
+        document.getElementById('numberInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter' && !document.getElementById('setFavoriteBtn').disabled) {
+                setFavorite();
+            }
+        });
+
+        // Tecla Escape para volver
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                goBack();
+            }
+        });
+
+        // Cargar datos al iniciar
+        loadWonderlandData();
+
+        // Registrar Service Worker para PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./sw.js')
+                .then((registration) => {
+                    console.log('Service Worker registrado:', registration.scope);
+                })
+                .catch((error) => {
+                    console.log('Error Service Worker:', error);
+                });
+        }
+    </script>
+</body>
+</html>

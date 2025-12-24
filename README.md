@@ -10,37 +10,40 @@ Una aplicación web educativa con 101 personajes de Wonderland para aprender nú
 
 ```
 wonderland/
-├── src/                          # Código fuente principal
-│   ├── pages/                    # Páginas HTML de la aplicación
-│   │   ├── index.html           # Página principal con navegación
-│   │   ├── memory_game.html     # Juego de memoria (4 dificultades)
-│   │   ├── gallery.html         # Galería con búsqueda
-│   │   ├── favorite.html        # Selección de números favoritos
-│   │   └── about.html           # Información de la aplicación
-│   ├── data/                    # Datos de los personajes
-│   │   ├── wonderland_data.js   # Datos en formato JavaScript
-│   │   └── wonderland_data.json # Datos en formato JSON
-│   ├── assets/                  # Recursos multimedia
-│   │   └── wonderland_assets/   # Imágenes y audio de 101 números
-│   ├── manifest.json           # Configuración PWA
-│   └── sw.js                   # Service Worker para offline
-├── scripts/                     # Scripts de Python
-│   ├── wonderland_scrapper.py  # Web scraper original
-│   ├── create_js_data.py       # Generador de archivo JS
-│   └── generate_json.py        # Generador de archivo JSON
-├── docs/                       # Documentación
-│   ├── README.md              # Documentación técnica
-│   └── INSTALL.md             # Guía de instalación
-├── dist/                       # Archivos de distribución
-├── .venv/                      # Entorno virtual Python
-├── index.html                 # Página de redirección
-└── package.json               # Configuración del proyecto
+├── index.html               # Página principal con navegación
+├── memory_game.html         # Juego de memoria (4 dificultades)
+├── gallery.html             # Galería con búsqueda
+├── favorite.html            # Selección de números favoritos
+├── about.html               # Información de la aplicación
+├── manifest.json            # Configuración PWA
+├── sw.js                    # Service Worker para offline
+├── data/                    # Datos de los personajes
+│   ├── wonderland_data.js   # Datos en formato JavaScript
+│   └── wonderland_data.json # Datos en formato JSON
+├── assets/                  # Recursos multimedia
+│   └── wonderland_assets/   # Imágenes y audio de 101 números
+├── scripts/                 # Scripts de Python
+│   ├── wonderland_scrapper.py
+│   ├── create_js_data.py
+│   └── generate_json.py
+├── .venv/                   # Entorno virtual Python
+└── package.json             # Configuración del proyecto
 ```
 
 ## 🚀 Inicio Rápido
 
-### Ejecutar la aplicación
+### 📱 **Jugar online (GitHub Pages)**
+1. Ve a: `https://TU-USUARIO.github.io/wonderland`
+2. **Instalar como PWA**: 
+   - **Móvil/Tablet**: Menú → "Instalar aplicación" o "Añadir a inicio"
+   - **Desktop**: Icono de instalación en la barra de direcciones
+
+### 💻 **Desarrollo local**
 ```bash
+# Clonar repositorio
+git clone https://github.com/TU-USUARIO/wonderland.git
+cd wonderland
+
 # Iniciar servidor local
 python -m http.server 8000
 
@@ -48,7 +51,7 @@ python -m http.server 8000
 open http://localhost:8000
 ```
 
-### Generar datos (opcional)
+### 🐍 **Generar datos (opcional)**
 ```bash
 # Activar entorno virtual
 source .venv/bin/activate
